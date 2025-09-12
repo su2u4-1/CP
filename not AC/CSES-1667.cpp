@@ -1,5 +1,5 @@
 // https://vjudge.net/problem/CSES-1667
-// WA 6/12
+// MLE 6/12
 #include <iostream>
 #include <queue>
 using namespace std;

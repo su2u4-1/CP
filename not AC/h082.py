@@ -1,3 +1,4 @@
+# https://zerojudge.tw/ShowProblem?problemid=h082
 # h082 NA 55%
 p: list[list[int]] = []
 n, m = map(int, input().split())

@@ -60,4 +60,5 @@ int main() {
         else
             cout << mb << " " << md << endl;
     }
+    return 0;
 }

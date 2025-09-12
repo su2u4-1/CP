@@ -1,3 +1,4 @@
+# https://zerojudge.tw/ShowProblem?problemid=b938
 # b938 MLE 50%
 n, m = map(int, input().split())
 pl = [i + 1 for i in range(n)]

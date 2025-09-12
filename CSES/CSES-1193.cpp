@@ -41,12 +41,10 @@ int main() {
             char c = get<2>(p[ex][ey]);
             int ntx = get<0>(p[ex][ey]), nty = get<1>(p[ex][ey]);
             string path;
-            // cout << "ntx: " << ntx << " nty: " << nty << " c: " << c << " path: " << path << endl;
             while (c != '\0') {
                 path += c;
                 auto [px, py, pc] = p[ntx][nty];
                 ntx = px, nty = py, c = pc;
-                // cout << "ntx: " << ntx << " nty: " << nty << " c: " << c << "path: " << path << endl;
             }
             reverse(path.begin(), path.end());
             cout << path << '\n';

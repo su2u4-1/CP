@@ -5,6 +5,8 @@
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
     int n, m;
     cin >> n >> m;
     bool cf[n][n];

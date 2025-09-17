@@ -2,6 +2,7 @@
 // MLE 6/12
 #include <iostream>
 #include <queue>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -9,10 +10,7 @@ int main() {
     cin.tie(0);
     int n, m;
     cin >> n >> m;
-    bool cf[n][n];
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++)
-            cf[i][j] = false;
+    vector<vector<bool>> cf = vector<vector<bool>>(n, vector<bool>(n, false));
     for (int i = 0; i < m; i++) {
         int a, b;
         cin >> a >> b;

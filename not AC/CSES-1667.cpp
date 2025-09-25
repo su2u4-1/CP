@@ -1,5 +1,5 @@
 // https://vjudge.net/problem/CSES-1667
-// MLE 6/12
+// TLE 11/12
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -10,12 +10,12 @@ int main() {
     cin.tie(0);
     int n, m;
     cin >> n >> m;
-    vector<vector<bool>> cf = vector<vector<bool>>(n, vector<bool>(n, false));
+    vector<vector<int>> cf = vector<vector<int>>(n, vector<int>());
     for (int i = 0; i < m; i++) {
         int a, b;
         cin >> a >> b;
-        cf[a - 1][b - 1] = true;
-        cf[b - 1][a - 1] = true;
+        cf[a - 1].push_back(b - 1);
+        cf[b - 1].push_back(a - 1);
     }
     queue<int> q;
     int p[n];
@@ -30,8 +30,8 @@ int main() {
     while (!q.empty()) {
         int x = q.front();
         q.pop();
-        for (int i = 0; i < n; i++) {
-            if (cf[x][i] && v[i] == -1) {
+        for (int i : cf[x]) {
+            if (v[i] == -1) {
                 q.push(i);
                 p[i] = x;
                 v[i] = v[x] + 1;

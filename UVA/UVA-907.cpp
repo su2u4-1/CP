@@ -7,10 +7,10 @@ bool f(int s) {
     int count = 0, sum = 0;
     for (int i = 0; i < N; i++) {
         if (sum + D[i] > s) {
-            sum = D[i];
+            sum = 0;
             count++;
-        } else
-            sum += D[i];
+        }
+        sum += D[i];
     }
     if (sum > 0)
         count++;
@@ -20,19 +20,18 @@ bool f(int s) {
 int main() {
     while (cin >> N >> K) {
         N++, K++;
-        for (int i = 0; i < N; i++)
-            cin >> D[i];
         int l = -1, r = 0;
         for (int i = 0; i < N; i++) {
+            cin >> D[i];
             l = max(l, D[i]);
             r += D[i];
         }
         int ans = l - 1, step = r - l;
         while (step > 0)
-            if (!f(ans + step))
-                ans += step;
-            else
+            if (f(ans + step))
                 step /= 2;
+            else
+                ans += step;
         cout << ans + 1 << endl;
     }
     return 0;

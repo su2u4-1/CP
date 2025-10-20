@@ -1,4 +1,3 @@
-// https://vjudge.net/problem/UVA-11456
 #include <iostream>
 using namespace std;
 

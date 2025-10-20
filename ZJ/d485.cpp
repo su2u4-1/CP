@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int a, b;
+    long long a, b;
     cin >> a >> b;
-    cout << abs(a - b) / 2 + (a != b || a % 2 == 0) << endl;
+    cout << b / 2 - (a + 1) / 2 + 1 << endl;
     return 0;
 }

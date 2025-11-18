@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int n, m, map[105][105], sx, sy, tx, ty, mi = INT_MAX, ans;
+    int n, m, map[105][105], sx, sy, tx, ty, nx, ny, mi = INT_MAX, ans;
     const int D[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     cin >> n >> m;
     for (int i = 1; i <= n; ++i)
@@ -30,7 +30,7 @@ int main() {
         mi = INT_MAX;
         tx = -1, ty = -1;
         for (int d = 0; d < 4; ++d) {
-            int nx = sx + D[d][0], ny = sy + D[d][1];
+            nx = sx + D[d][0], ny = sy + D[d][1];
             if (map[nx][ny] < mi) {
                 tx = nx, ty = ny;
                 mi = map[nx][ny];

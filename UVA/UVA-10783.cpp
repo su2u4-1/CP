@@ -11,7 +11,7 @@ int main() {
             ++a;
         if (b % 2 == 0)
             --b;
-        for (int i = a; i <= b; i += 2) 
+        for (int i = a; i <= b; i += 2)
             s += i;
         cout << "Case " << ++c << ": " << s << endl;
     }
